@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="ok">
+<input type="button" onclick="Search()" value="Search">
+<p id="result"></p>
+<script>
+    let viet = [1,2,3,4,5];
+    let eng = ['one','two','three','four','five'];
+
+    function Search(){
+        let  a = document.getElementById('ok').value;
+        for (let i = 0; i < viet.length; i++) {
+
+                if (a == viet[i]) {
+                    document.getElementById('result').innerHTML = eng[i];
+                    break;
+                } else {
+                    document.getElementById('result').innerHTML = 'không tìm thấy'
+                }
+            }
+
+    }
+</script>
+</body>
+</html>
